@@ -20,6 +20,12 @@ class Program
             Console.WriteLine("6: Registro de Pasatiempos");
             Console.WriteLine("7: Registro de Deportes");
             Console.WriteLine("8: Registro Alumnos(2)");
+            Console.WriteLine("9: Registro Alumnos(eliminacion)(3)");
+            Console.WriteLine("10: Registro Alumnos(guardar)(3)");
+            Console.WriteLine("11: Json Test");
+            Console.WriteLine("12: JsonArchivo");
+            Console.WriteLine("13: JsonLectura");
+            Console.WriteLine("14: ExcepcionesPersonalizadas");
             Console.WriteLine("0: Salir");
             
             Console.WriteLine("Selecciona el programa deseado");
@@ -49,6 +55,24 @@ class Program
                     break;
                 case 8:
                     new Runner08_RegistroAlumnos();
+                    break;
+                case 9:
+                    new Runner09_RegistroAlumnos();
+                    break;
+                case 10:
+                    new Runner10_RegistroAlumnos();
+                    break;
+                case 11:
+                    new JsonTest();
+                    break;
+                case 12:
+                    new JsonArchivoAlumnos();
+                    break;
+                case 13:
+                    new JsonLecturaAlumnos();
+                    break;
+                case 14:
+                    new RunnerExcepcionesPersonalizadas();
                     break;
                 case 0 :
                     Console.WriteLine("Saliendo del programa................");
