@@ -74,6 +74,9 @@ class Program
                 case 14:
                     new RunnerExcepcionesPersonalizadas();
                     break;
+                case 15 :
+                    new RunnerEjecutarOperacionesBasicas();
+                    break;
                 case 0 :
                     Console.WriteLine("Saliendo del programa................");
                     break;
