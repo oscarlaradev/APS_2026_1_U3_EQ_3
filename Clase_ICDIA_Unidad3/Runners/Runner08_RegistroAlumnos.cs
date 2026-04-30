@@ -2,10 +2,18 @@ using Clase_ICDIA_Unidad3.Programas;
 
 namespace Clase_ICDIA_Unidad3.Runners;
 
+/// <summary>
+/// Runner para registro y visualizacion de alumnos con carga de archivo.  
+/// </summary>
 public class Runner08_RegistroAlumnos
 {
+    /// <summary>
+    /// Constructor que carga alumnos del archivo y permite registrar nuevos.
+    /// </summary>
     public Runner08_RegistroAlumnos()
     {
+        try
+        {
 
         string ruta = "registro.csv";
         List<Alumno> alumnos = new List<Alumno>();
@@ -75,5 +83,10 @@ public class Runner08_RegistroAlumnos
                     break;
             }
         } while (opcion != 0);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error en Runner08: {ex.Message}");
+        }
     }
 }

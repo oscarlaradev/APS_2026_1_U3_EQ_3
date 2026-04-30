@@ -2,38 +2,54 @@
 
 namespace Clase_ICDIA_Unidad3;
 
+/// <summary>
+/// Clase principal que contiene el punto de entrada de la aplicacion.
+/// Presenta un menu para ejecutar diferentes runners.
+/// </summary>
 class Program
 {
+    /// <summary>
+    /// Metodo principal que ejecuta el menu interactivo de la aplicacion.
+    /// Permite al usuario seleccionar y ejecutar diferentes programas.
+    /// </summary>
+    /// <param name="args">Argumentos de linea de comandos (no utilizados)</param>
     static void Main(string[] args)
     {
-        
-        
-        int n = 0;
-        do
+        try
         {
-            Console.Clear();
-            Console.WriteLine("1: Registro Alumno (Archivo)");
-            Console.WriteLine("2: Registro Alumnos (Runner)");
-            Console.WriteLine("3: Registro de Comidas");
-            Console.WriteLine("4: Registro de Mascotas");
-            Console.WriteLine("5: Registro de Música");
-            Console.WriteLine("6: Registro de Pasatiempos");
-            Console.WriteLine("7: Registro de Deportes");
-            Console.WriteLine("8: Registro Alumnos(2)");
-            Console.WriteLine("9: Registro Alumnos(eliminacion)(3)");
-            Console.WriteLine("10: Registro Alumnos(guardar)(3)");
-            Console.WriteLine("11: Json Test");
-            Console.WriteLine("12: JsonArchivo");
-            Console.WriteLine("13: JsonLectura");
-            Console.WriteLine("14: ExcepcionesPersonalizadas");
-            Console.WriteLine("15: Ejecutar OperacionesBasicas");
-            Console.WriteLine("16: Areas Poligonos");
-            Console.WriteLine("17: Aumno Puntuacion");
-            Console.WriteLine("18: LeerArchivos");
-            Console.WriteLine("0: Salir");
-            
-            Console.WriteLine("Selecciona el programa deseado");
-            n = Convert.ToInt32(Console.ReadLine());
+            int n = 0;
+            do
+            {
+                try
+                {
+                    Console.Clear();
+                    Console.WriteLine("1: Registro Alumno (Archivo)");
+                    Console.WriteLine("2: Registro Alumnos (Runner)");
+                    Console.WriteLine("3: Registro de Comidas");
+                    Console.WriteLine("4: Registro de Mascotas");
+                    Console.WriteLine("5: Registro de Musica");
+                    Console.WriteLine("6: Registro de Pasatiempos");
+                    Console.WriteLine("7: Registro de Deportes");
+                    Console.WriteLine("8: Registro Alumnos(2)");
+                    Console.WriteLine("9: Registro Alumnos(eliminacion)(3)");
+                    Console.WriteLine("10: Registro Alumnos(guardar)(3)");
+                    Console.WriteLine("11: Json Test");
+                    Console.WriteLine("12: JsonArchivo");
+                    Console.WriteLine("13: JsonLectura");
+                    Console.WriteLine("14: ExcepcionesPersonalizadas");
+                    Console.WriteLine("15: Ejecutar OperacionesBasicas");
+                    Console.WriteLine("16: Areas Poligonos");
+                    Console.WriteLine("17: Alumno Puntuacion");
+                    Console.WriteLine("18: LeerArchivos");
+                    Console.WriteLine("0: Salir");
+                    
+                    Console.WriteLine("Selecciona el programa deseado");
+                    
+                    if (!int.TryParse(Console.ReadLine(), out n))
+                    {
+                        Console.WriteLine("Error: Ingresa un numero valido");
+                        continue;
+                    }
             switch (n)
             {
                 case 1:
@@ -99,10 +115,14 @@ class Program
             }
             if (n != 0)
             {
-                Console.WriteLine("\nPresiona una tecla para volver al menú.................");
+                Console.WriteLine("\nPresiona una tecla para volver al menu.................");
                 Console.ReadKey();
             }
         } while (n != 0);
-        
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error crítico en la aplicación: {ex.Message}");
+        }
     }
 }

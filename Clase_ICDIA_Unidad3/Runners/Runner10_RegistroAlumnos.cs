@@ -2,10 +2,19 @@ using Clase_ICDIA_Unidad3.Programas;
 
 namespace Clase_ICDIA_Unidad3.Runners;
 
+/// <summary>
+/// Runner para registro, visualizacion, eliminacion y guardado de alumnos.
+/// Permite guardar los cambios realizados en el archivo.
+/// </summary>
 public class Runner10_RegistroAlumnos
 {
+    /// <summary>
+    /// Constructor que ejecuta operaciones completas de gestion de alumnos.
+    /// </summary>
     public Runner10_RegistroAlumnos()
     {
+        try
+        {
         long matricula;
         string nombre;
 
@@ -97,5 +106,10 @@ public class Runner10_RegistroAlumnos
                     break;
             }
         } while (opcion != 0);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error en Runner10: {ex.Message}");
+        }
     }
 }

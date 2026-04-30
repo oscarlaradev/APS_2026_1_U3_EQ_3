@@ -2,10 +2,18 @@ using Clase_ICDIA_Unidad3.Programas;
 
 namespace Clase_ICDIA_Unidad3.Runners;
 
+/// <summary>
+/// Runner para registro, visualizacion y eliminacion de alumnos.
+/// </summary>
 public class Runner09_RegistroAlumnos
 {
+    /// <summary>
+    /// Constructor que ejecuta operaciones de registro, visualizacion y eliminacion.
+    /// </summary>
     public Runner09_RegistroAlumnos()
     {
+        try
+        {
         long matricula;
         string nombre;
 
@@ -89,5 +97,10 @@ public class Runner09_RegistroAlumnos
                     break;
             }
         } while (opcion != 0);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error en Runner09: {ex.Message}");
+        }
     }
 }
