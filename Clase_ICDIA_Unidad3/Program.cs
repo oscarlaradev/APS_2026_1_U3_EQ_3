@@ -26,6 +26,10 @@ class Program
             Console.WriteLine("12: JsonArchivo");
             Console.WriteLine("13: JsonLectura");
             Console.WriteLine("14: ExcepcionesPersonalizadas");
+            Console.WriteLine("15: Ejecutar OperacionesBasicas");
+            Console.WriteLine("16: Areas Poligonos");
+            Console.WriteLine("17: Aumno Puntuacion");
+            Console.WriteLine("18: LeerArchivos");
             Console.WriteLine("0: Salir");
             
             Console.WriteLine("Selecciona el programa deseado");
@@ -76,6 +80,15 @@ class Program
                     break;
                 case 15 :
                     new RunnerEjecutarOperacionesBasicas();
+                    break;
+                case 16:
+                    new RunnerAreasPoligonos();
+                    break;
+                case 17:
+                    new RunnerAlumnoPuntuacion();
+                    break;
+                case 18:
+                    new RunnerLeerArchivos();
                     break;
                 case 0 :
                     Console.WriteLine("Saliendo del programa................");
